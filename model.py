@@ -85,4 +85,5 @@ def get_datagen(X_train):
                             vertical_flip=True) # Randomly flip inputs vertically
     
     datagen.fit(X_train)
+    return datagen
     

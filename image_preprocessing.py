@@ -37,7 +37,7 @@ def extract_labels(data):
     return to_categorical(Y, num_classes=12)
 
 def extract_features(data, image_size):
-    X = np.zeros(data.shape[0], image_size, image_size, 3)
+    X = np.zeros((data.shape[0], image_size, image_size, 3))
     for i, file in enumerate(data['Filepath'].values):
         image = read_image(file)
         image_segmented = segment_image(image)
